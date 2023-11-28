@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms'; // Import para usar Reactive Forms
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserFormComponent } from './user-form/user-form.component';
-import { UserComponent } from './user/user.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { UserComponent } from './components/user/user.component';
 import { LogService } from './log.service';
-import { HomeComponent } from './home/home.component'; // Ajuste o caminho de importação
+import { UserService } from './service/user/user.service';
+import { AuthService } from './service/auth/auth.service';
+import { HomeComponent } from './components/home/home.component'; // Ajuste o caminho de importação
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { HomeComponent } from './home/home.component'; // Ajuste o caminho de im
     ReactiveFormsModule 
   ],
   providers: [
-    LogService
+    LogService,
+    UserService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

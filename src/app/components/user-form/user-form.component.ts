@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { LogService } from '../log.service';
+import { LogService } from '../../log.service';
 
 @Component({
   selector: 'app-user-form',
